@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="20dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="6dp">
+
+        <!-- Content to be scrolled -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--1-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Quiz Genre"
+                android:id="@+id/Quizgenre"/>
+
+            <EditText
+                android:id="@+id/QuestionNum1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Question Number" />
+
+            <EditText
+                android:id="@+id/editTextQuestion1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your question"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/QuestionNum"
+                app:layout_constraintVertical_bias="0.05" />
+
+            <EditText
+                android:id="@+id/editTextOptionA1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option A"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextQuestion"
+                app:layout_constraintVertical_bias="0.1" />
+
+            <EditText
+                android:id="@+id/editTextOptionB1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option B"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionA"
+                app:layout_constraintVertical_bias="0.1" />
+
+            <EditText
+                android:id="@+id/editTextOptionC1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option C"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionB"
+                app:layout_constraintVertical_bias="0.1" />
+
+            <EditText
+                android:id="@+id/editTextOptionD1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option D"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionC"
+                app:layout_constraintVertical_bias="0.1" />
+
+            <!--2-->
+
+
+            <EditText
+                android:id="@+id/QuestionNum2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Question Number" />
+
+            <EditText
+                android:id="@+id/editTextQuestion2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your question"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/QuestionNum"
+                app:layout_constraintVertical_bias="0.05"/>
+
+            <EditText
+                android:id="@+id/editTextOptionA2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option A"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextQuestion"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionB2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option B"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionA"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionC2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option C"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionB"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionD2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option D"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionC"
+                app:layout_constraintVertical_bias="0.1"/>
+            <!--3-->
+
+
+
+            <EditText
+                android:id="@+id/QuestionNum3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Question Number" />
+
+            <EditText
+                android:id="@+id/editTextQuestion3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your question"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/QuestionNum"
+                app:layout_constraintVertical_bias="0.05"/>
+
+            <EditText
+                android:id="@+id/editTextOptionA3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option A"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextQuestion"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionB3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option B"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionA"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionC3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option C"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionB"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionD3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option D"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionC"
+                app:layout_constraintVertical_bias="0.1"/>
+
+
+            <!--4-->
+            <EditText
+                android:id="@+id/QuestionNum4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Question Number" />
+
+            <EditText
+                android:id="@+id/editTextQuestion4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your question"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/QuestionNum"
+                app:layout_constraintVertical_bias="0.05"/>
+
+            <EditText
+                android:id="@+id/editTextOptionA4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option A"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextQuestion"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionB4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option B"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionA"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionC4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option C"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionB"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionD4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option D"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionC"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <!--5-->
+
+            <EditText
+                android:id="@+id/QuestionNum5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Question Number" />
+
+            <EditText
+                android:id="@+id/editTextQuestion5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your question"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/QuestionNum"
+                app:layout_constraintVertical_bias="0.05"/>
+
+            <EditText
+                android:id="@+id/editTextOptionA5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option A"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextQuestion"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionB5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option B"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionA"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionC5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option C"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionB"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionD5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option D"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionC"
+                app:layout_constraintVertical_bias="0.1"/>
+
+
+            <!--6-->
+
+            <EditText
+                android:id="@+id/QuestionNum6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Question Number" />
+
+            <EditText
+                android:id="@+id/editTextQuestion6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your question"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/QuestionNum"
+                app:layout_constraintVertical_bias="0.05"/>
+
+            <EditText
+                android:id="@+id/editTextOptionA6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option A"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextQuestion"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionB6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option B"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionA"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionC6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option C"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionB"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionD6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option D"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionC"
+                app:layout_constraintVertical_bias="0.1"/>
+
+
+
+            <!--7-->
+
+            <EditText
+                android:id="@+id/QuestionNum7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Question Number" />
+
+            <EditText
+                android:id="@+id/editTextQuestion7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your question"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/QuestionNum"
+                app:layout_constraintVertical_bias="0.05"/>
+
+            <EditText
+                android:id="@+id/editTextOptionA7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option A"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextQuestion"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionB7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option B"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionA"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionC7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option C"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionB"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionD7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option D"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionC"
+                app:layout_constraintVertical_bias="0.1"/>
+
+
+            <!--8-->
+            <EditText
+                android:id="@+id/QuestionNum8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Question Number" />
+
+            <EditText
+                android:id="@+id/editTextQuestion8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your question"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/QuestionNum"
+                app:layout_constraintVertical_bias="0.05"/>
+
+            <EditText
+                android:id="@+id/editTextOptionA8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option A"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextQuestion"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionB8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option B"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionA"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionC8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option C"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionB"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionD8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option D"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionC"
+                app:layout_constraintVertical_bias="0.1"/>
+
+
+            <!--9-->
+            <EditText
+                android:id="@+id/QuestionNum9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Question Number" />
+
+            <EditText
+                android:id="@+id/editTextQuestion9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your question"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/QuestionNum"
+                app:layout_constraintVertical_bias="0.05"/>
+
+            <EditText
+                android:id="@+id/editTextOptionA9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option A"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextQuestion"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionB9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option B"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionA"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionC9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option C"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionB"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionD9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option D"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionC"
+                app:layout_constraintVertical_bias="0.1"/>
+
+
+
+            <!--10-->
+            <EditText
+                android:id="@+id/QuestionNum10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Question Number" />
+
+            <EditText
+                android:id="@+id/editTextQuestion10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your question"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/QuestionNum"
+                app:layout_constraintVertical_bias="0.05"/>
+
+            <EditText
+                android:id="@+id/editTextOptionA10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option A"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextQuestion"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionB10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option B"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionA"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionC10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option C"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionB"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <EditText
+                android:id="@+id/editTextOptionD10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option D"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOptionC"
+                app:layout_constraintVertical_bias="0.1"/>
+
+            <Button
+                android:id="@+id/buttonSavedata"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="SAVE DATA" />
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+

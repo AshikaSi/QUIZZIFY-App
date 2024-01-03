@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/createTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Create Account"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/username1EditText"
+        app:layout_constraintVertical_bias="0.01"/>
+
+    <EditText
+        android:id="@+id/username1EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:hint="Username"
+        app:layout_constraintTop_toBottomOf="@+id/createTextView"
+        app:layout_constraintBottom_toTopOf="@+id/emailEditText"/>
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:hint="Email"
+        app:layout_constraintTop_toBottomOf="@+id/username1EditText"
+        app:layout_constraintBottom_toTopOf="@+id/password1EditText"/>
+
+    <EditText
+        android:id="@+id/password1EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText"
+        app:layout_constraintBottom_toTopOf="@+id/confirmEditText"/>
+
+    <EditText
+        android:id="@+id/confirmEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/password1EditText"
+        app:layout_constraintBottom_toTopOf="@+id/SignUp1Button"/>
+
+    <Button
+        android:id="@+id/SignUp1Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        app:layout_constraintTop_toBottomOf="@+id/confirmEditText"
+        app:layout_constraintBottom_toTopOf="@+id/SignIn1TextView"
+        app:layout_constraintVertical_bias="0.09"/>
+
+    <TextView
+        android:id="@+id/SignIn1TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account? Sign In"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:onClick="SignUpClicked"
+        app:layout_constraintTop_toBottomOf="@+id/SignUp1Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

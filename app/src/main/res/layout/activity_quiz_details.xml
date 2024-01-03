@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".QuizDetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="6dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvquizid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quiz ID" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quiz Genre"
+                android:id="@+id/tvQuizgenre"
+                app:layout_constraintTop_toBottomOf="@+id/tvquizid"/>
+
+            <TextView
+                android:id="@+id/tvQuestionNum1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Question Number"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuizgenre"/>
+
+            <TextView
+                android:id="@+id/tvQuestion1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Question"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuestionNum1"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionA1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option A"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuestion1"
+                app:layout_constraintVertical_bias="0.02" />
+
+            <TextView
+                android:id="@+id/tvoptionB1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option B"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionA1"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionC1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option C"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionB1"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionD1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option D"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionC1"
+                app:layout_constraintVertical_bias="0" />
+
+            <!--2-->
+
+
+            <TextView
+                android:id="@+id/tvQuestionNum2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question Number"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionD1" />
+
+            <TextView
+                android:id="@+id/tvQuestion2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuestionNum2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionA2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option A"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuestion2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.02" />
+
+            <TextView
+                android:id="@+id/tvoptionB2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option B"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionA2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionC2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option C"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionB2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionD2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option D"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionC2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <!--3-->
+
+
+
+            <TextView
+                android:id="@+id/tvQuestionNum3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question Number"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionD2" />
+
+            <TextView
+                android:id="@+id/tvQuestion3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuestionNum3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionA3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option A"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuestion3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.02" />
+
+            <TextView
+                android:id="@+id/tvoptionB3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option B"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionA3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionC3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option C"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionB3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionD3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option D"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionC3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+
+
+
+            <!--4-->
+            <TextView
+                android:id="@+id/tvQuestionNum4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question Number"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionD3" />
+
+            <TextView
+                android:id="@+id/tvQuestion4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuestionNum4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionA4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option A"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuestion4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.02" />
+
+            <TextView
+                android:id="@+id/tvoptionB4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option B"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionA4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionC4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option C"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionB4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionD4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option D"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionC4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <!--5-->
+
+            <TextView
+                android:id="@+id/tvQuestionNum5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question Number"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionD4" />
+
+            <TextView
+                android:id="@+id/tvQuestion5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuestionNum5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionA5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option A"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuestion5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.02" />
+
+            <TextView
+                android:id="@+id/tvoptionB5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option B"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionA5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionC5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option C"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionB5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionD5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option D"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionC5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <!--6-->
+            <TextView
+                android:id="@+id/tvQuestionNum6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question Number"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionD5" />
+
+            <TextView
+                android:id="@+id/tvQuestion6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuestionNum6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionA6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option A"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuestion6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.02" />
+
+            <TextView
+                android:id="@+id/tvoptionB6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option B"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionA6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionC6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option C"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionB6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionD6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option D"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionC6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <!--7-->
+            <TextView
+                android:id="@+id/tvQuestionNum7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question Number"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionD6" />
+
+            <TextView
+                android:id="@+id/tvQuestion7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuestionNum7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionA7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option A"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuestion7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.02" />
+
+            <TextView
+                android:id="@+id/tvoptionB7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option B"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionA7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionC7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option C"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionB7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionD7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option D"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionC7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <!--8-->
+
+            <TextView
+                android:id="@+id/tvQuestionNum8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question Number"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionD7" />
+
+            <TextView
+                android:id="@+id/tvQuestion8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuestionNum8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionA8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option A"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuestion8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.02" />
+
+            <TextView
+                android:id="@+id/tvoptionB8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option B"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionA8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionC8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option C"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionB8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionD8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option D"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionC8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <!--9-->
+            <TextView
+                android:id="@+id/tvQuestionNum9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question Number"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionD8" />
+
+            <TextView
+                android:id="@+id/tvQuestion9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuestionNum9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionA9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option A"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuestion9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.02" />
+
+            <TextView
+                android:id="@+id/tvoptionB9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option B"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionA9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionC9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option C"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionB9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionD9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option D"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionC9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+            <!--10-->
+
+            <TextView
+                android:id="@+id/tvQuestionNum10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question Number"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionD9" />
+
+            <TextView
+                android:id="@+id/tvQuestion10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuestionNum10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionA10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option A"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuestion10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.02" />
+
+            <TextView
+                android:id="@+id/tvoptionB10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option B"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionA10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionC10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option C"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionB10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvoptionD10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option D"
+                app:layout_constraintTop_toBottomOf="@+id/tvoptionC10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

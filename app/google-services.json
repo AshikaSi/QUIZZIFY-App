@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1011201866727",
+    "project_id": "quizzify-11202",
+    "storage_bucket": "quizzify-11202.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011201866727:android:8358a4e691a61df9d69b42",
+        "android_client_info": {
+          "package_name": "jiya.learning.quizzify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1011201866727-raep4kf4jkkssq3e8r31fhj1lfrrr1oe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "jiya.learning.quizzify",
+            "certificate_hash": "924b3d00cb0356370f86c78d6ff7470ce94e2042"
+          }
+        },
+        {
+          "client_id": "1011201866727-sged352647k11d5nil5a63gbpb5ruta4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0UGmykq-qUsnWqJ50AwGMjujt2sPimAU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1011201866727-sged352647k11d5nil5a63gbpb5ruta4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
