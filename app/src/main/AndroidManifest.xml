@@ -33,6 +33,9 @@
         <activity android:name=".QuizAdapter"
             android:exported="false"/>
 
+        <activity android:name=".QuizDetailsActivity"
+            android:exported="false"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

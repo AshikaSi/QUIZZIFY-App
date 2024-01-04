@@ -22,6 +22,7 @@ class OneActivity : AppCompatActivity() {
 
         val email = intent.getStringExtra("email")
         val displayName = intent.getStringExtra("displayName")
+
         val firebase: DatabaseReference = FirebaseDatabase.getInstance().getReference()
 
         btcreate =findViewById(R.id.createbutton)

@@ -91,6 +91,7 @@ class InsertionActivity : AppCompatActivity() {
     private lateinit var etoptionB10: EditText
     private lateinit var etoptionC10: EditText
     private lateinit var etoptionD10: EditText
+    private lateinit var btnSaveData: Button
 
     private lateinit var dbRef: DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -169,12 +170,12 @@ class InsertionActivity : AppCompatActivity() {
         etoptionB10 = findViewById(R.id.editTextOptionB10)
         etoptionC10 = findViewById(R.id.editTextOptionC10)
         etoptionD10 = findViewById(R.id.editTextOptionD10)
+        btnSaveData = findViewById(R.id.buttonSavedata)
 
         dbRef = FirebaseDatabase.getInstance()
             .getReference("QuizQuestions")//In future remember this name to open the database and fetch your data stored there
 
-        val buttonSaveData: Button = findViewById(R.id.buttonSavedata)
-        buttonSaveData.setOnClickListener {
+        btnSaveData.setOnClickListener {
             saveQuizQuestionsData()//function
         }
     }
@@ -275,7 +276,7 @@ class InsertionActivity : AppCompatActivity() {
 
         val quizid = dbRef.push().key!! //to denote an id for a quiz
 
-        val list = Questionslist(
+        val QuizQuestions = Questionslist(
             quizGenre, quizid, QuestionNum1, Question1, optionA1, optionB1, optionC1, optionD1,
             QuestionNum2, Question2, optionA2, optionB2, optionC2, optionD2,
             QuestionNum3, Question3, optionA3, optionB3, optionC3, optionD3,
@@ -288,7 +289,7 @@ class InsertionActivity : AppCompatActivity() {
             QuestionNum10, Question10, optionA10, optionB10, optionC10, optionD10
         )
 
-        dbRef.child(quizid).setValue(list)
+        dbRef.child(quizid).setValue(QuizQuestions)
             .addOnCompleteListener {
                 Toast.makeText(this, "Data inserted successfully", Toast.LENGTH_LONG).show()
 
