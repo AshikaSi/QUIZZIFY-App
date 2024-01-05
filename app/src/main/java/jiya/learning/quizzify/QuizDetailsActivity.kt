@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class QuizDetailsActivity : AppCompatActivity() {
 
-    private lateinit var tvquizid : TextView
+    private lateinit var quizid : TextView
     private lateinit var tvQuizgenre : TextView
     private lateinit var tvQuestionNum1 : TextView
     private lateinit var tvQuestion1 : TextView
@@ -86,10 +86,83 @@ class QuizDetailsActivity : AppCompatActivity() {
         setValuesToViews()
 
     }
-    private fun initView(){}
+    private fun initView(){
+        quizid = findViewById(R.id.tvquizid)
+        tvQuizgenre = findViewById(R.id.tvQuizgenre)
+        tvQuestionNum1 = findViewById(R.id.tvQuestionNum1)
+        tvQuestion1 = findViewById(R.id.tvQuestion1)
+        tvoptionA1 = findViewById(R.id.tvoptionA1)
+        tvoptionB1 = findViewById(R.id.tvoptionB1)
+        tvoptionC1 = findViewById(R.id.tvoptionC1)
+        tvoptionD1 = findViewById(R.id.tvoptionD1)
+
+        tvQuestionNum2 = findViewById(R.id.tvQuestionNum2)
+        tvQuestion2 = findViewById(R.id.tvQuestion2)
+        tvoptionA2 = findViewById(R.id.tvoptionA2)
+        tvoptionB2 = findViewById(R.id.tvoptionB2)
+        tvoptionC2 = findViewById(R.id.tvoptionC2)
+        tvoptionD2 = findViewById(R.id.tvoptionD2)
+
+        tvQuestionNum3 = findViewById(R.id.tvQuestionNum3)
+        tvQuestion3 = findViewById(R.id.tvQuestion3)
+        tvoptionA3 = findViewById(R.id.tvoptionA3)
+        tvoptionB3 = findViewById(R.id.tvoptionB3)
+        tvoptionC3 = findViewById(R.id.tvoptionC3)
+        tvoptionD3 = findViewById(R.id.tvoptionD3)
+
+        tvQuestionNum4 = findViewById(R.id.tvQuestionNum4)
+        tvQuestion4 = findViewById(R.id.tvQuestion4)
+        tvoptionA4 = findViewById(R.id.tvoptionA4)
+        tvoptionB4 = findViewById(R.id.tvoptionB4)
+        tvoptionC4 = findViewById(R.id.tvoptionC4)
+        tvoptionD4 = findViewById(R.id.tvoptionD4)
+
+        tvQuestionNum5 = findViewById(R.id.tvQuestionNum5)
+        tvQuestion5 = findViewById(R.id.tvQuestion5)
+        tvoptionA5 = findViewById(R.id.tvoptionA5)
+        tvoptionB5 = findViewById(R.id.tvoptionB5)
+        tvoptionC5 = findViewById(R.id.tvoptionC5)
+        tvoptionD5 = findViewById(R.id.tvoptionD5)
+
+        tvQuestionNum6 = findViewById(R.id.tvQuestionNum6)
+        tvQuestion6 = findViewById(R.id.tvQuestion6)
+        tvoptionA6 = findViewById(R.id.tvoptionA6)
+        tvoptionB6 = findViewById(R.id.tvoptionB6)
+        tvoptionC6 = findViewById(R.id.tvoptionC6)
+        tvoptionD6 = findViewById(R.id.tvoptionD6)
+
+        tvQuestionNum8 = findViewById(R.id.tvQuestionNum8)
+        tvQuestion8 = findViewById(R.id.tvQuestion8)
+        tvoptionA8 = findViewById(R.id.tvoptionA8)
+        tvoptionB8 = findViewById(R.id.tvoptionB8)
+        tvoptionC8 = findViewById(R.id.tvoptionC8)
+        tvoptionD8 = findViewById(R.id.tvoptionD8)
+
+        tvQuestionNum7 = findViewById(R.id.tvQuestionNum7)
+        tvQuestion7 = findViewById(R.id.tvQuestion7)
+        tvoptionA7 = findViewById(R.id.tvoptionA7)
+        tvoptionB7 = findViewById(R.id.tvoptionB7)
+        tvoptionC7 = findViewById(R.id.tvoptionC7)
+        tvoptionD7 = findViewById(R.id.tvoptionD7)
+
+        tvQuestionNum9 = findViewById(R.id.tvQuestionNum9)
+        tvQuestion9 = findViewById(R.id.tvQuestion9)
+        tvoptionA9 = findViewById(R.id.tvoptionA9)
+        tvoptionB9 = findViewById(R.id.tvoptionB9)
+        tvoptionC9 = findViewById(R.id.tvoptionC9)
+        tvoptionD9 = findViewById(R.id.tvoptionD9)
+
+        tvQuestionNum10 = findViewById(R.id.tvQuestionNum10)
+        tvQuestion10 = findViewById(R.id.tvQuestion10)
+        tvoptionA10 = findViewById(R.id.tvoptionA10)
+        tvoptionB10 = findViewById(R.id.tvoptionB10)
+        tvoptionC10 = findViewById(R.id.tvoptionC10)
+        tvoptionD10 = findViewById(R.id.tvoptionD10)
+
+    }
     private fun setValuesToViews(){
 
-        tvquizid.text = intent.getStringExtra("quizid")
+        quizid.text = intent.getStringExtra("quizid")
         tvQuizgenre.text = intent.getStringExtra("Quizgenre")
         tvQuestionNum1.text = intent.getStringExtra("QuestionNum1")
         tvQuestion1.text = intent.getStringExtra("Question1")

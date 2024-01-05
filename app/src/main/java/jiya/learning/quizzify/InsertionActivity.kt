@@ -120,7 +120,7 @@ class InsertionActivity : AppCompatActivity() {
         etoptionA3 = findViewById(R.id.editTextOptionA3)
         etoptionB3 = findViewById(R.id.editTextOptionB3)
         etoptionC3 = findViewById(R.id.editTextOptionC3)
-        etoptionD4 = findViewById(R.id.editTextOptionD4)
+        etoptionD3 = findViewById(R.id.editTextOptionD3)
 
         etQuestionNum4 = findViewById(R.id.QuestionNum4)
         etQuestion4 = findViewById(R.id.editTextQuestion4)

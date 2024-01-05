@@ -21,7 +21,7 @@ class QuizAdapter(private val queslist: List<Questionslist>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.quesview, parent, false)
-        return ViewHolder(itemView)
+        return ViewHolder(itemView, mListener)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -36,8 +36,14 @@ class QuizAdapter(private val queslist: List<Questionslist>) :
         return queslist.size
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView: View, clickListener: onItemClickListener) : RecyclerView.ViewHolder(itemView) {
         val tvquizlist: TextView = itemView.findViewById(R.id.tvquizlist)
+
+        init{
+            itemView.setOnClickListener{
+                clickListener.onItemClick(adapterPosition)
+            }
+        }
 
 
         }
