@@ -3,90 +3,160 @@ package jiya.learning.quizzify
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import android.os.CountDownTimer
+import android.content.Intent
+import android.view.View
+import android.widget.Toast
+import android.widget.EditText
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
+import android.widget.ImageView
+import android.widget.RadioButton
+import android.widget.RadioGroup
+import android.widget.Button
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+
 
 class QuizDetailsActivity : AppCompatActivity() {
 
-    private lateinit var quizid : TextView
-    private lateinit var tvQuizgenre : TextView
-    private lateinit var tvQuestionNum1 : TextView
-    private lateinit var tvQuestion1 : TextView
-    private lateinit var tvoptionA1 : TextView
-    private lateinit var tvoptionB1 : TextView
-    private lateinit var tvoptionC1 : TextView
-    private lateinit var tvoptionD1 : TextView
+    private var score: Double = 0.0
+    private lateinit var quizid: TextView
+    private lateinit var tvQuizgenre: TextView
+    private lateinit var tvQuestionNum1: TextView
+    private lateinit var tvQuestion1: TextView
+    private lateinit var tvoptionA1: TextView
+    private lateinit var tvoptionB1: TextView
+    private lateinit var tvoptionC1: TextView
+    private lateinit var tvoptionD1: TextView
 
-    private lateinit var tvQuestionNum2 : TextView
-    private lateinit var tvQuestion2 : TextView
-    private lateinit var tvoptionA2 : TextView
-    private lateinit var tvoptionB2 : TextView
-    private lateinit var tvoptionC2 : TextView
-    private lateinit var tvoptionD2 : TextView
+    private lateinit var tvQuestionNum2: TextView
+    private lateinit var tvQuestion2: TextView
+    private lateinit var tvoptionA2: TextView
+    private lateinit var tvoptionB2: TextView
+    private lateinit var tvoptionC2: TextView
+    private lateinit var tvoptionD2: TextView
 
-    private lateinit var tvQuestionNum3 : TextView
-    private lateinit var tvQuestion3 : TextView
-    private lateinit var tvoptionA3 : TextView
-    private lateinit var tvoptionB3 : TextView
-    private lateinit var tvoptionC3 : TextView
-    private lateinit var tvoptionD3 : TextView
+    private lateinit var tvQuestionNum3: TextView
+    private lateinit var tvQuestion3: TextView
+    private lateinit var tvoptionA3: TextView
+    private lateinit var tvoptionB3: TextView
+    private lateinit var tvoptionC3: TextView
+    private lateinit var tvoptionD3: TextView
 
-    private lateinit var tvQuestionNum4 : TextView
-    private lateinit var tvQuestion4 : TextView
-    private lateinit var tvoptionA4 : TextView
-    private lateinit var tvoptionB4 : TextView
-    private lateinit var tvoptionC4 : TextView
-    private lateinit var tvoptionD4 : TextView
+    private lateinit var tvQuestionNum4: TextView
+    private lateinit var tvQuestion4: TextView
+    private lateinit var tvoptionA4: TextView
+    private lateinit var tvoptionB4: TextView
+    private lateinit var tvoptionC4: TextView
+    private lateinit var tvoptionD4: TextView
 
-    private lateinit var tvQuestionNum5 : TextView
-    private lateinit var tvQuestion5 : TextView
-    private lateinit var tvoptionA5 : TextView
-    private lateinit var tvoptionB5 : TextView
-    private lateinit var tvoptionC5 : TextView
-    private lateinit var tvoptionD5 : TextView
+    private lateinit var tvQuestionNum5: TextView
+    private lateinit var tvQuestion5: TextView
+    private lateinit var tvoptionA5: TextView
+    private lateinit var tvoptionB5: TextView
+    private lateinit var tvoptionC5: TextView
+    private lateinit var tvoptionD5: TextView
 
-    private lateinit var tvQuestionNum6 : TextView
-    private lateinit var tvQuestion6 : TextView
-    private lateinit var tvoptionA6 : TextView
-    private lateinit var tvoptionB6 : TextView
-    private lateinit var tvoptionC6 : TextView
-    private lateinit var tvoptionD6 : TextView
+    private lateinit var tvQuestionNum6: TextView
+    private lateinit var tvQuestion6: TextView
+    private lateinit var tvoptionA6: TextView
+    private lateinit var tvoptionB6: TextView
+    private lateinit var tvoptionC6: TextView
+    private lateinit var tvoptionD6: TextView
 
-    private lateinit var tvQuestionNum7 : TextView
-    private lateinit var tvQuestion7 : TextView
-    private lateinit var tvoptionA7 : TextView
-    private lateinit var tvoptionB7 : TextView
-    private lateinit var tvoptionC7 : TextView
-    private lateinit var tvoptionD7 : TextView
+    private lateinit var tvQuestionNum7: TextView
+    private lateinit var tvQuestion7: TextView
+    private lateinit var tvoptionA7: TextView
+    private lateinit var tvoptionB7: TextView
+    private lateinit var tvoptionC7: TextView
+    private lateinit var tvoptionD7: TextView
 
-    private lateinit var tvQuestionNum8 : TextView
-    private lateinit var tvQuestion8 : TextView
-    private lateinit var tvoptionA8 : TextView
-    private lateinit var tvoptionB8 : TextView
-    private lateinit var tvoptionC8 : TextView
-    private lateinit var tvoptionD8 : TextView
+    private lateinit var tvQuestionNum8: TextView
+    private lateinit var tvQuestion8: TextView
+    private lateinit var tvoptionA8: TextView
+    private lateinit var tvoptionB8: TextView
+    private lateinit var tvoptionC8: TextView
+    private lateinit var tvoptionD8: TextView
 
-    private lateinit var tvQuestionNum9 : TextView
-    private lateinit var tvQuestion9 : TextView
-    private lateinit var tvoptionA9 : TextView
-    private lateinit var tvoptionB9 : TextView
-    private lateinit var tvoptionC9 : TextView
-    private lateinit var tvoptionD9 : TextView
+    private lateinit var tvQuestionNum9: TextView
+    private lateinit var tvQuestion9: TextView
+    private lateinit var tvoptionA9: TextView
+    private lateinit var tvoptionB9: TextView
+    private lateinit var tvoptionC9: TextView
+    private lateinit var tvoptionD9: TextView
 
-    private lateinit var tvQuestionNum10 : TextView
-    private lateinit var tvQuestion10 : TextView
-    private lateinit var tvoptionA10 : TextView
-    private lateinit var tvoptionB10 : TextView
-    private lateinit var tvoptionC10 : TextView
-    private lateinit var tvoptionD10 : TextView
+    private lateinit var tvQuestionNum10: TextView
+    private lateinit var tvQuestion10: TextView
+    private lateinit var tvoptionA10: TextView
+    private lateinit var tvoptionB10: TextView
+    private lateinit var tvoptionC10: TextView
+    private lateinit var tvoptionD10: TextView
+    private lateinit var textView: TextView
+//    private lateinit var correctAnswerId1: EditText
+//    private lateinit var correctAnswerId2: EditText
+//    private lateinit var correctAnswerId3: EditText
+//    private lateinit var correctAnswerId4: EditText
+//    private lateinit var correctAnswerId5: EditText
+//    private lateinit var correctAnswerId6: EditText
+//    private lateinit var correctAnswerId7: EditText
+//    private lateinit var correctAnswerId8: EditText
+//    private lateinit var correctAnswerId9: EditText
+//    private lateinit var correctAnswerId10: EditText
+
+
+//    private lateinit var storageReference: StorageReference
+//    private lateinit var recyclerView: RecyclerView
+//    private lateinit var imageAdapter: ImageAdapter
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_details)
+
+        val submitButton: Button = findViewById(R.id.btnsubmit)
+
+        submitButton.setOnClickListener {
+            // Handle button click, e.g., navigate to LeaderActivity
+            val intent = Intent(this, LeaderActivity::class.java)
+            startActivity(intent)
+            checkAnswer()
+        }
+
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        val textView: TextView = findViewById(R.id.textView)
+        // time count down for 30 seconds,
+        // with 1 second as countDown interval
+        object : CountDownTimer(300000, 1000) {
+
+            // Callback function, fired on regular interval
+            override fun onTick(millisUntilFinished: Long) {
+                val minutes = (millisUntilFinished / 1000) / 60
+                val seconds = (millisUntilFinished / 1000) % 60
+                val timerText = String.format("Time remaining: %02d:%02d", minutes, seconds)
+                textView.text = timerText
+            }
+
+            // Callback function, fired when the time is up
+            override fun onFinish() {
+                textView.text = "Time's up!"
+                // Start the LeaderActivity
+                val intent = Intent(this@QuizDetailsActivity, LeaderActivity::class.java)
+                startActivity(intent)
+
+                // Finish the current activity (optional)
+                finish()
+            }
+        }.start()
 
         initView()
         setValuesToViews()
 
     }
-    private fun initView(){
+
+    private fun initView() {
         quizid = findViewById(R.id.tvquizid)
         tvQuizgenre = findViewById(R.id.tvQuizgenre)
         tvQuestionNum1 = findViewById(R.id.tvQuestionNum1)
@@ -160,7 +230,8 @@ class QuizDetailsActivity : AppCompatActivity() {
         tvoptionD10 = findViewById(R.id.tvoptionD10)
 
     }
-    private fun setValuesToViews(){
+
+    private fun setValuesToViews() {
 
         quizid.text = intent.getStringExtra("quizid")
         tvQuizgenre.text = intent.getStringExtra("Quizgenre")
@@ -236,4 +307,80 @@ class QuizDetailsActivity : AppCompatActivity() {
 
 
     }
+
+    private fun calculateScore(): Double {
+
+        return score // Change this based on your scoring logic
+    }
+
+    private fun checkAnswer() {
+        val radioGroup: RadioGroup = findViewById(R.id.radioGroupOptions)
+        val selectedRadioButtonId = radioGroup.checkedRadioButtonId
+
+        if (selectedRadioButtonId != -1) {
+            val selectedRadioGroup: RadioButton = findViewById(selectedRadioButtonId)
+
+            val correctOption = intent.getStringExtra("correct")
+
+            if (correctOption != null && selectedRadioGroup.text.toString() == correctOption) {
+                score += 1
+                Toast.makeText(
+                    this@QuizDetailsActivity,
+                    "Correct Answer\nScore - $score",
+                    Toast.LENGTH_LONG
+                ).show()
+                val intent = Intent(this@QuizDetailsActivity, LeaderActivity::class.java)
+                startActivity(intent)
+            } else {
+                Toast.makeText(this@QuizDetailsActivity, "Incorrect Answer", Toast.LENGTH_SHORT)
+                    .show()
+                val intent = Intent(this@QuizDetailsActivity, LeaderActivity::class.java)
+                startActivity(intent)
+            }
+        } else {
+            // Handle the case where no radio button is selected
+        }
+    }
 }
+//fun onOptionClick(view: View) {
+//    val correctAnswerId1 = intent.getStringExtra("CORRECT_ANSWER_ID")
+//    val editTextValue = correctAnswerId1.text.toString()
+//
+//    val intValue = editTextValue.toIntOrNull()
+//    if (intValue == A1) {
+//        val clickedOptionId = view.id
+//        if (clickedOptionId == correctAnswerId1) {
+//
+//            Toast.makeText(this, "Correct", Toast.LENGTH_SHORT).show()
+//
+//        } else {
+//
+//            Toast.makeText(this, "Incorrect", Toast.LENGTH_SHORT).show()
+//
+//        }
+//    }
+//    else {
+//
+//    }
+//
+//}
+//    fun onOptionClick(view: View) {
+//        val correctAnswerId1 = intent.getStringExtra("CORRECT_ANSWER_ID")
+//
+//        // Assuming that correctAnswerId1 is not null
+//        val clickedOptionId = view.id
+//
+//        if (clickedOptionId == correctAnswerId1) {
+//            // Correct Answer
+//            Toast.makeText(this, "Correct", Toast.LENGTH_SHORT).show()
+//            // Do something for a correct answer, e.g., update the score
+//        } else {
+//            // Incorrect Answer
+//            Toast.makeText(this, "Incorrect", Toast.LENGTH_SHORT).show()
+//            // Do something for an incorrect answer
+//        }
+//    }
+
+
+
+

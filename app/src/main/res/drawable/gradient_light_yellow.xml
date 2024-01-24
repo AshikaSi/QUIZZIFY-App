@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:type="linear"
+        android:startX="0"
+        android:startY="0"
+        android:endX="1"
+        android:endY="1"
+        android:angle="45"
+        android:centerX="0.5"
+        android:centerY="0.5"
+        android:useLevel="false">
+        <item
+            android:color="#FF0000" /> <!-- Red -->
+        <item
+            android:color="#FF7F00" /> <!-- Orange -->
+        <item
+            android:color="#FFFF00" /> <!-- Yellow -->
+        <item
+            android:color="#00FF00" /> <!-- Green -->
+        <item
+            android:color="#0000FF" /> <!-- Blue -->
+        <item
+            android:color="#4B0082" /> <!-- Indigo -->
+        <item
+            android:color="#8B00FF" /> <!-- Violet -->
+    </gradient>
+</shape>

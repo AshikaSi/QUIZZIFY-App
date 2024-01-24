@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OneActivity"
-    android:padding="20dp">
+    tools:context=".HomeActivity"
+    android:background="@drawable/gradient_light_yellow">
 
     <ImageView
         android:id="@+id/Profileimg"
@@ -24,7 +24,7 @@
         android:id="@+id/ProfileTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="PROFILE"
+        android:text="MY PROFILE"
         android:gravity="center"
         android:textColor="@color/material_dynamic_tertiary30"
         android:textSize="40sp"
@@ -36,57 +36,32 @@
         app:layout_constraintTop_toBottomOf="@+id/Profileimg"/>
 
     <TextView
+        android:id="@+id/whoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The user details:"
+        android:gravity="center"
+        android:textColor="@color/material_dynamic_tertiary30"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toBottomOf="@+id/ProfileTextView"/>
+
+    <TextView
         android:id="@+id/nameTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintVertical_bias="0"
-        app:layout_constraintTop_toBottomOf="@+id/ProfileTextView"/>
-
-    <Button
-        android:id="@+id/createbutton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Create Quiz"
-        app:layout_constraintTop_toBottomOf="@+id/nameTextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-         />
-    <Button
-        android:id="@+id/Getbutton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Get Created Quiz"
-        app:layout_constraintTop_toBottomOf="@+id/createbutton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="0" />
-
-    <TextView
-        android:id="@+id/signoutTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Sign Out"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Getbutton"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1"
-        android:clickable="true"
-        android:onClick="SignOutClicked"
-        />
-
+        app:layout_constraintTop_toBottomOf="@+id/whoTextView"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

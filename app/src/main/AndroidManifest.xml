@@ -21,10 +21,16 @@
         <activity android:name=".FetchActivity"
             android:exported="false"/>
 
-        <activity android:name=".OneActivity"
+        <activity android:name=".Person"
             android:exported="false"/>
 
         <activity android:name=".InsertionActivity"
+            android:exported="false"/>
+        <activity android:name=".UserImage"
+            android:exported="false"/>
+        <activity android:name=".ImageAdapter"
+            android:exported="false"/>
+        <activity android:name=".RecyclerImageActivity"
             android:exported="false"/>
 
         <activity android:name=".Questionslist"
@@ -35,6 +41,19 @@
 
         <activity android:name=".QuizDetailsActivity"
             android:exported="false"/>
+        <activity android:name=".LeaderActivity"
+            android:exported="false"/>
+        <activity android:name=".HomeActivity"
+            android:exported="false"/>
+        <activity android:name=".Help"
+            android:exported="false"/>
+        <activity android:name=".Person"
+            android:exported="false"/>
+        <activity android:name=".Progress"
+            android:exported="false"/>
+        <activity android:name=".Home"
+            android:exported="false"/>
+
 
         <activity
             android:name=".MainActivity"

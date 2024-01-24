@@ -3,6 +3,11 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
     id("com.google.gms.google-services")
+
+
+
+
+
 }
 
 android {
@@ -50,6 +55,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.constraintlayout)
     implementation(libs.firebase.auth)
+    implementation(libs.firebase.storage)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -60,5 +66,13 @@ dependencies {
     implementation("com.google.firebase:firebase-database")
     implementation ("androidx.databinding:databinding-runtime:7.0.0")
     implementation ("androidx.recyclerview:recyclerview:1.3.2")
+    implementation ("com.google.android.material:material:1.2.0")
+    implementation ("androidx.appcompat:appcompat:1.3.0")
+    implementation ("androidx.fragment:fragment-ktx:1.4.0")
+    implementation ("androidx.core:core-ktx:1.6.0")
+    implementation ("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.21")
+    implementation ("com.squareup.picasso:picasso:2.71828")
+    implementation ("com.github.bumptech.glide:glide:4.13.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.13.0")
 
 }
