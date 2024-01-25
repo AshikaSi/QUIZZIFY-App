@@ -26,10 +26,11 @@ class QuizAdapter(private val queslist: List<Questionslist>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentquiz = queslist[position]
-        holder.tvquizlist.text = currentquiz.Quizgenre
+        holder.tvquizlist.text = currentquiz.quizid
         holder.itemView.setOnClickListener {
             mListener.onItemClick(position)
         }
+
     }
 
     override fun getItemCount(): Int {

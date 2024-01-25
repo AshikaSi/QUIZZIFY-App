@@ -72,7 +72,7 @@ dependencies {
     implementation ("androidx.core:core-ktx:1.6.0")
     implementation ("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.21")
     implementation ("com.squareup.picasso:picasso:2.71828")
-    implementation ("com.github.bumptech.glide:glide:4.13.0")
-    annotationProcessor ("com.github.bumptech.glide:compiler:4.13.0")
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.16.0")
 
 }

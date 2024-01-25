@@ -24,14 +24,14 @@ class Person : Fragment(R.layout.fragment_person) {
 
         auth = FirebaseAuth.getInstance()
 
-//        val email = arguments?.getString("email")
+//      val email = arguments?.getString("email")
         val email = auth.currentUser!!.email
-//        val displayName = arguments?.getString("displayName")
+       val displayName = arguments?.getString("displayName")
 
         val firebase: DatabaseReference = FirebaseDatabase.getInstance().getReference()
 
 
-//        view.findViewById<TextView>(R.id.nameTextView).text = "$email\n$displayName"
+       view.findViewById<TextView>(R.id.nameTextView).text = "$email\n$displayName"
 
         return view
     }

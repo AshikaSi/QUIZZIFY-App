@@ -157,14 +157,45 @@ class InsertionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_insertion)
 
-        // Assuming you have the correct answer ID stored in a variable
-        val correctanswer1 = "A1"
+        cp1 = findViewById(R.id.correctanswer1)
+        cp2 = findViewById(R.id.correctanswer2)
+        cp3 = findViewById(R.id.correctanswer3)
+        cp4 = findViewById(R.id.correctanswer4)
+        cp5 = findViewById(R.id.correctanswer5)
+        cp6 = findViewById(R.id.correctanswer6)
+        cp7 = findViewById(R.id.correctanswer7)
+        cp8 = findViewById(R.id.correctanswer8)
+        cp9 = findViewById(R.id.correctanswer9)
+        cp10 = findViewById(R.id.correctanswer10)
+
+// Getting the correct answer ID from the TextView
+        val correctAnswer1 = cp1.text.toString()
+        val correctAnswer2 = cp2.text.toString()
+        val correctAnswer3 = cp3.text.toString()
+        val correctAnswer4 = cp4.text.toString()
+        val correctAnswer5 = cp5.text.toString()
+        val correctAnswer6 = cp6.text.toString()
+        val correctAnswer7 = cp7.text.toString()
+        val correctAnswer8 = cp8.text.toString()
+        val correctAnswer9 = cp9.text.toString()
+        val correctAnswer10 = cp10.text.toString()
 
 // Creating an Intent to start the second activity
         val intent = Intent(this, QuizDetailsActivity::class.java)
 
 // Putting the correct answer ID as an extra in the Intent
-        intent.putExtra("CORRECT_ANSWER_ID", correctanswer1)
+        intent.putExtra("CORRECT_ANSWER_ID1", correctAnswer1)
+        intent.putExtra("CORRECT_ANSWER_ID2", correctAnswer2)
+        intent.putExtra("CORRECT_ANSWER_ID3", correctAnswer3)
+        intent.putExtra("CORRECT_ANSWER_ID4", correctAnswer4)
+        intent.putExtra("CORRECT_ANSWER_ID5", correctAnswer5)
+        intent.putExtra("CORRECT_ANSWER_ID6", correctAnswer6)
+        intent.putExtra("CORRECT_ANSWER_ID7", correctAnswer7)
+        intent.putExtra("CORRECT_ANSWER_ID8", correctAnswer8)
+        intent.putExtra("CORRECT_ANSWER_ID9", correctAnswer9)
+        intent.putExtra("CORRECT_ANSWER_ID10", correctAnswer10)
+
+
 
 // Starting the second activity
         startActivity(intent)

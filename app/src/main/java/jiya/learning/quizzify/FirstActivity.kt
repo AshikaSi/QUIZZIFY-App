@@ -97,7 +97,7 @@ class FirstActivity : AppCompatActivity() {
         val credential = GoogleAuthProvider.getCredential(account.idToken, null)
         firebaseAuth.signInWithCredential(credential).addOnCompleteListener {
             if (it.isSuccessful) {
-                val intent: Intent = Intent(this, HomeActivity::class.java)
+                val intent: Intent = Intent(this, Person::class.java)
                 intent.putExtra("email", account.email)
                 intent.putExtra("displayName", account.displayName)
                 startActivity(intent)

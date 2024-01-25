@@ -15,7 +15,6 @@ class HomeActivity : AppCompatActivity() {
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView)
 
-        val progress = Progress()
         val person = Person()
         val help = Help()
         val home = Home()
@@ -26,8 +25,8 @@ class HomeActivity : AppCompatActivity() {
             when (it.itemId) {
                 R.id.home -> setCurrentFragment(home)
                 R.id.person -> setCurrentFragment(person)
-                R.id.progress -> setCurrentFragment(progress)
                 R.id.help -> setCurrentFragment(help)
+
             }
             true
         }

@@ -1,5 +1,5 @@
 package jiya.learning.quizzify
-
+import android.util.Log
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -94,17 +94,6 @@ class QuizDetailsActivity : AppCompatActivity() {
     private lateinit var tvoptionC10: TextView
     private lateinit var tvoptionD10: TextView
     private lateinit var textView: TextView
-//    private lateinit var correctAnswerId1: EditText
-//    private lateinit var correctAnswerId2: EditText
-//    private lateinit var correctAnswerId3: EditText
-//    private lateinit var correctAnswerId4: EditText
-//    private lateinit var correctAnswerId5: EditText
-//    private lateinit var correctAnswerId6: EditText
-//    private lateinit var correctAnswerId7: EditText
-//    private lateinit var correctAnswerId8: EditText
-//    private lateinit var correctAnswerId9: EditText
-//    private lateinit var correctAnswerId10: EditText
-
 
 //    private lateinit var storageReference: StorageReference
 //    private lateinit var recyclerView: RecyclerView
@@ -116,12 +105,19 @@ class QuizDetailsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_quiz_details)
 
         val submitButton: Button = findViewById(R.id.btnsubmit)
+        val correctOption = intent.getStringExtra("CORRECT_ANSWER_ID1")
 
         submitButton.setOnClickListener {
             // Handle button click, e.g., navigate to LeaderActivity
+
+            if (correctOption != null) {
+                Log.d("physics",correctOption);
+                checkAnswer(correctOption.toString())
+            }else
+                Log.d("physics","NULL")
             val intent = Intent(this, LeaderActivity::class.java)
             startActivity(intent)
-            checkAnswer()
+
         }
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
@@ -308,79 +304,38 @@ class QuizDetailsActivity : AppCompatActivity() {
 
     }
 
-    private fun calculateScore(): Double {
+//    private fun calculateScore(): Double {
+//
+//        return score // Change this based on your scoring logic
+//    }
 
-        return score // Change this based on your scoring logic
-    }
-
-    private fun checkAnswer() {
+    public fun checkAnswer( correctOption:String ) {
         val radioGroup: RadioGroup = findViewById(R.id.radioGroupOptions)
         val selectedRadioButtonId = radioGroup.checkedRadioButtonId
 
         if (selectedRadioButtonId != -1) {
             val selectedRadioGroup: RadioButton = findViewById(selectedRadioButtonId)
 
-            val correctOption = intent.getStringExtra("correct")
-
-            if (correctOption != null && selectedRadioGroup.text.toString() == correctOption) {
-                score += 1
-                Toast.makeText(
-                    this@QuizDetailsActivity,
-                    "Correct Answer\nScore - $score",
-                    Toast.LENGTH_LONG
-                ).show()
-                val intent = Intent(this@QuizDetailsActivity, LeaderActivity::class.java)
-                startActivity(intent)
+//            val correctOption = intent.getStringExtra("CORRECT_ANSWER_ID1")
+            println(correctOption);
+            println(selectedRadioGroup.text.toString())
+            if (correctOption != null) {
+                Log.d("physics",correctOption)
+            }
+            else
+                Log.d("physics","null");
+            if (correctOption != null && selectedRadioGroup.text.toString()
+                    .equals(correctOption, ignoreCase = true))
+            {
+                Toast.makeText(this@QuizDetailsActivity, "Correct Answer", Toast.LENGTH_LONG).show()
             } else {
                 Toast.makeText(this@QuizDetailsActivity, "Incorrect Answer", Toast.LENGTH_SHORT)
                     .show()
-                val intent = Intent(this@QuizDetailsActivity, LeaderActivity::class.java)
-                startActivity(intent)
             }
-        } else {
-            // Handle the case where no radio button is selected
+        }else{
+
         }
+
     }
+
 }
-//fun onOptionClick(view: View) {
-//    val correctAnswerId1 = intent.getStringExtra("CORRECT_ANSWER_ID")
-//    val editTextValue = correctAnswerId1.text.toString()
-//
-//    val intValue = editTextValue.toIntOrNull()
-//    if (intValue == A1) {
-//        val clickedOptionId = view.id
-//        if (clickedOptionId == correctAnswerId1) {
-//
-//            Toast.makeText(this, "Correct", Toast.LENGTH_SHORT).show()
-//
-//        } else {
-//
-//            Toast.makeText(this, "Incorrect", Toast.LENGTH_SHORT).show()
-//
-//        }
-//    }
-//    else {
-//
-//    }
-//
-//}
-//    fun onOptionClick(view: View) {
-//        val correctAnswerId1 = intent.getStringExtra("CORRECT_ANSWER_ID")
-//
-//        // Assuming that correctAnswerId1 is not null
-//        val clickedOptionId = view.id
-//
-//        if (clickedOptionId == correctAnswerId1) {
-//            // Correct Answer
-//            Toast.makeText(this, "Correct", Toast.LENGTH_SHORT).show()
-//            // Do something for a correct answer, e.g., update the score
-//        } else {
-//            // Incorrect Answer
-//            Toast.makeText(this, "Incorrect", Toast.LENGTH_SHORT).show()
-//            // Do something for an incorrect answer
-//        }
-//    }
-
-
-
-
